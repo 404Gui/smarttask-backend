@@ -1,6 +1,6 @@
 # SmartTask 🧠
 
-Projeto pessoal de um sistema de gerenciamento de tarefas. A ideia é ter um to-do list mais completo, com backend em **FastAPI + PostgreSQL**, e frontend em **Next.js com TypeScript**.
+Projeto pessoal de um sistema de gerenciamento de tarefas. A ideia é ter um to-do list mais completo, com backend em **FastAPI + PostgreSQL**, e frontend em **React com TypeScript**.
 
 ---
 
