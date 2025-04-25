@@ -10,9 +10,11 @@ class TaskCreate(TaskBase):
 class TaskRead(TaskBase):
     id: int
     completed: bool
+    user_id: int
 
     class Config:
         orm_mode = True
+
 
 class TaskUpdate(BaseModel):
     title: str | None = None

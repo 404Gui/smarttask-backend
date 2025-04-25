@@ -1,14 +1,13 @@
-# venv
 venv/
+
+# Alembic
+alembic/
+
+*.env
+
 __pycache__/
+*.py[cod]
 
-# env
-.env
-
-# editor
-.vscode/
-
-# pthon
-*.pyc
-*.pyo
-*.pyd
+# temporários
+*.log
+*.sqlite3

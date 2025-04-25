@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
 from app.db import Base
-
 
 class Task(Base):
     __tablename__ = "tasks"
@@ -9,5 +9,6 @@ class Task(Base):
     title = Column(String, nullable=False)
     description = Column(String)
     completed = Column(Boolean, default=False)
+    user_id = Column(Integer, ForeignKey("users.id"))
 
-
+    user = relationship("User", back_populates="tasks")
