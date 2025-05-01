@@ -11,7 +11,7 @@ Projeto pessoal de um sistema de gerenciamento de tarefas. A ideia é ter um to-
 - SQLAlchemy
 - Pydantic
 - Python 3.11+
-- Docker (somente pro banco)
+- Docker
 
 ---
 
@@ -19,22 +19,11 @@ Projeto pessoal de um sistema de gerenciamento de tarefas. A ideia é ter um to-
 
 - Estrutura inicial da API
 - CRUD completo de tarefas:
-  - `GET` todas ou uma tarefa específica
-  - `POST` nova tarefa
-  - `PUT` pra atualizar
-  - `DELETE` pra remover
 - Integração com PostgreSQL
 - Schemas e validações com Pydantic
-
----
-
-## Próximos passos
-
-- [ ] Autenticação com JWT
-- [ ] Relacionar usuários com tarefas
-- [ ] Criar testes
-- [ ] Subir pra produção (Railway talvez)
-- [ ] Iniciar o frontend com Next.js
+- Rotas de registro e login
+- Autenticação com JWT
+- Relacionamento entre usuários e tarefas
 
 ---
 
