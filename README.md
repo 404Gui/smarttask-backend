@@ -1,6 +1,6 @@
-# SmartTask 🧠
+# Taskoom - back-end 🧠
 
-Projeto pessoal de um sistema de gerenciamento de tarefas. A ideia é ter um to-do list mais completo, com backend em **FastAPI + PostgreSQL**, e frontend em **React com TypeScript**.
+Este é um projeto pessoal de um sistema de gerenciamento de tarefas. A ideia é criar um to-do list mais completo, com backend em FastAPI e PostgreSQL, oferecendo funcionalidades como login, registro e autenticação de usuários. No frontend, uso React com TypeScript para garantir uma interface limpa, intuitiva e com integração fluida com o backend.
 
 ---
 
