@@ -4,7 +4,8 @@ from app.db import get_db
 from app.models.task import Task
 from app.models.user import User
 from app.schemas.task import TaskCreate, TaskRead, TaskUpdate
-from app.auth import get_current_user  # 👈
+from app.auth import get_current_user
+
 
 router = APIRouter(prefix="/tasks", tags=["Tasks"])
 
@@ -18,6 +19,8 @@ def create_task(
     db_task = Task(
         title=task.title,
         description=task.description,
+        priority=task.priority,
+        due_date=task.due_date,
         user_id=current_user.id 
     )
     db.add(db_task)
