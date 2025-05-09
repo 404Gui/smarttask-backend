@@ -10,7 +10,7 @@ class UserCreate(UserBase):
 
 # schema para login
 class UserLogin(BaseModel):
-    username: str
+    email: EmailStr
     password: str
 
 # Dados retornados (sem senha)

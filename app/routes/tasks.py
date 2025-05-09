@@ -9,7 +9,7 @@ from app.auth import get_current_user
 
 router = APIRouter(prefix="/tasks", tags=["Tasks"])
 
-# C
+
 @router.post("/", response_model=TaskRead)
 def create_task(
     task: TaskCreate,
@@ -28,7 +28,7 @@ def create_task(
     db.refresh(db_task)
     return db_task
 
-# R
+
 @router.get("/", response_model=list[TaskRead])
 def get_tasks(
     db: Session = Depends(get_db),
@@ -37,7 +37,7 @@ def get_tasks(
     tasks = db.query(Task).filter(Task.user_id == current_user.id).all()
     return tasks
 
-# U
+
 @router.put("/{task_id}", response_model=TaskRead)
 def update_task(
     task_id: int,
@@ -55,12 +55,16 @@ def update_task(
         task.description = task_update.description
     if task_update.completed is not None:
         task.completed = task_update.completed
+    if task_update.priority is not None:
+        task.priority = task_update.priority
+    if task_update.due_date is not None:
+        task.priority = task_update.priority
 
     db.commit()
     db.refresh(task)
     return task
 
-# D
+
 @router.delete("/{task_id}", status_code=204)
 def delete_task(
     task_id: int,

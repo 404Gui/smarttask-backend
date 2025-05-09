@@ -8,7 +8,6 @@ class TaskBase(BaseModel):
     priority: Optional[Literal['baixa', 'média', 'alta']] = 'média'
     due_date: Optional[datetime] = None
 
-
 class TaskCreate(TaskBase):
     pass
 
@@ -20,8 +19,6 @@ class TaskRead(TaskBase):
 
     class Config:
         orm_mode = True
-
-
 
 class TaskUpdate(BaseModel):
     title: str | None = None
